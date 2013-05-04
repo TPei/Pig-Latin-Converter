@@ -1,10 +1,20 @@
 def pig_latin_converter(word):
 	vowels = ['a', 'e', 'i', 'o', 'u']
 	word = word.lower()
+	pig_word = ''
+	counter = 0
 	if word[0] in vowels:
 		return word + 'way'
-	else:
-		return word[1:] + word[0] + 'ay'
+
+	for letter in word:
+		if letter in vowels:
+			break
+		else:
+			counter += 1
+
+	pig_word = word[counter:] + word[0: counter] + 'ay'
+
+	return pig_word
 
 
 

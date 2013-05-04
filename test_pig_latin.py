@@ -15,6 +15,17 @@ class TestPigLatin(unittest.TestCase):
 		expected = "uckday"
 		self.assertEqual(expected, actual)
 
+	# test words with multiple consonants at the beginning
+	def test_with_consonants(self):
+		actual = pig_latin.pig_latin_converter("flow")
+		expected = "owflay"
+		self.assertEqual(expected, actual)
+
+	def test_with_consonants2(self):
+		actual = pig_latin.pig_latin_converter("fly")
+		expected = "flyay"
+		self.assertEqual(expected, actual)
+
 	# test words with vowels at the beginning
 	def test_with_vowel(self):
 		actual = pig_latin.pig_latin_converter("egg")
