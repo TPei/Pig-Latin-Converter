@@ -17,7 +17,16 @@ def pig_latin_converter(word):
 	return pig_word
 
 
+def pig_latin_sentence(sentence):
+	words = sentence.split()
+	pig_latin = ''
+	for word in words:
+		word = pig_latin_converter(word)
+		pig_latin += word + ' '
+
+	return pig_latin
+
 
 
 if __name__ == '__main__':
-	print(pig_latin_converter(raw_input("Enter word: ")))
+	print(pig_latin_sentence(raw_input("Enter a sentence: ")))

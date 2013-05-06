@@ -37,6 +37,11 @@ class TestPigLatin(unittest.TestCase):
 		expected = "inboxway"
 		self.assertEqual(expected, actual)
 
+	def test_with_sentence(self):
+		actual = pig_latin.pig_latin_sentence("what the heck is this stuff")
+		expected = "atwhay ethay eckhay isway isthay uffstay "
+		self.assertEqual(expected, actual)
+
 
 if __name__ == '__main__':
     unittest.main(exit=False)
